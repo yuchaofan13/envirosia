@@ -3,7 +3,7 @@ from duckduckgo_search import ddg
 import re
 
 
-def get_fund_object(user_input: str) -> Ticker | None:
+def get_fund_object(user_input: str) -> Ticker:
     """
     Lets user input a fund name or keywords.
     If a matching Yahoo Finance page is found,
@@ -21,7 +21,7 @@ def get_fund_object(user_input: str) -> Ticker | None:
                 return fund
 
 
-def get_equity(ticker_name: str) -> dict | None:
+def get_equity(ticker_name: str) -> dict:
     """Does not work well for holdings that are Chinese tickers
     Maybe they're just not there on Yahoo Finance
     """

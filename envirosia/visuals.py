@@ -43,7 +43,7 @@ def flatten_nested_json_df(df: pd.DataFrame)-> pd.DataFrame:
     return df
 
 
-def pd_msci(row: dict | None)-> dict | None:
+def pd_msci(row: dict)-> dict:
     output = {"implied_temp": None, "latest_rating": None}
     if not isinstance(row, dict):
         return output

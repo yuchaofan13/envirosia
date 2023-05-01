@@ -7,7 +7,7 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-async def gather_chat_completions(message_batches: list[list[dict]])-> list[dict]:
+async def gather_chat_completions(message_batches):
     async with ClientSession() as session:
         openai.aiosession.set(session)
         
