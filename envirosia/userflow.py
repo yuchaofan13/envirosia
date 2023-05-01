@@ -23,12 +23,17 @@ def on_input(fund_input: str):
         fund_name = fund.quotes[fund_ticker]["longName"]
     else:
         fund_name = fund.quotes[fund_ticker]["shortName"]
-    fund_description = fund.asset_profile[fund_ticker]["longBusinessSummary"]
+    
+    fund_description = None
+    if "longBusinessSummary" in fund.asset_profile[fund_ticker]:
+        fund_description = fund.asset_profile[fund_ticker]["longBusinessSummary"]
 
     with st.spinner("Fetching holdings data..."):
         holdings_data = orchestrator(fund.fund_top_holdings["symbol"])
-    
-    st.subheader(f"Report for {fund_name}")
+    if holdings_data =={}:
+        st.write("Could not find data for fund holdings.")
+        return
+    st.subheader(f"Report for {fund_name} ({fund_ticker})")
     gen_fund_graphics(fund, fund_name, holdings_data)
     
     fund_info = openai.ChatCompletion.create(

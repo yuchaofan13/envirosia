@@ -66,7 +66,8 @@ def gen_fund_graphics(fund_object: Ticker, fund_name: str, holdings_data: dict):
         .set_index("Name")
         .dropna(how="all")
     )
-    df["MSCI"] = df["MSCI"].apply(pd_msci)
+    if "MSCI" in df.columns:
+        df["MSCI"] = df["MSCI"].apply(pd_msci)
     df = flatten_nested_json_df(df)
 
     with col1:
