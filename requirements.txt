@@ -1,0 +1,10 @@
+aiohttp==3.8.4
+beautifulsoup4==4.12.2
+boto3==1.26.123
+duckduckgo_search==2.8.6
+openai==0.27.4
+pandas==1.5.3
+plotly==5.14.1
+python-dotenv==1.0.0
+streamlit==1.21.0
+yahooquery==2.3.1
