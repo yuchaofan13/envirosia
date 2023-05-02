@@ -12,7 +12,7 @@ def flatten_nested_json_df(df: pd.DataFrame)-> pd.DataFrame:
     s = (df.applymap(type) == list).all()
     list_columns = s[s].index.tolist()
 
-    s = (df.applymap(type) == dict).all()
+    s = (df.applymap(type) == dict).any() # quick fix
     dict_columns = s[s].index.tolist()
 
     while len(list_columns) > 0 or len(dict_columns) > 0:
