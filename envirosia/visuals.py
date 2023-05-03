@@ -38,7 +38,7 @@ def flatten_nested_json_df(df: pd.DataFrame)-> pd.DataFrame:
         s = (df[new_columns].applymap(type) == list).all()
         list_columns = s[s].index.tolist()
 
-        s = (df[new_columns].applymap(type) == dict).all()
+        s = (df[new_columns].applymap(type) == dict).any()
         dict_columns = s[s].index.tolist()
     return df
 
