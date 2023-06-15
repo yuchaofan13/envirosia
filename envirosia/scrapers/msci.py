@@ -3,7 +3,7 @@ import re
 from bs4 import BeautifulSoup
 
 
-async def get_msci(session, name, ticker):
+async def get_msci(session, name: str, ticker: str) -> dict | None:
     """Allows fuzzy matching"""
     search_name = "+".join(name.split())  # purely to format the keywords query
     headers = {

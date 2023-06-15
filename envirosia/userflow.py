@@ -19,10 +19,10 @@ def on_input(fund_input: str):
         # either couldn't find fund or can't find holdings
         return
     fund_ticker = fund.symbols[0]
-    if "longName" in fund.quotes[fund_ticker]:
-        fund_name = fund.quotes[fund_ticker]["longName"]
+    if "longName" in fund.quote_type[fund_ticker]:
+        fund_name = fund.quote_type[fund_ticker]["longName"]
     else:
-        fund_name = fund.quotes[fund_ticker]["shortName"]
+        fund_name = fund.quote_type[fund_ticker]["shortName"]
     
     fund_description = None
     if "longBusinessSummary" in fund.asset_profile[fund_ticker]:

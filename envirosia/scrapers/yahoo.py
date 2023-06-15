@@ -26,11 +26,11 @@ def get_equity(ticker_name: str) -> dict:
     Maybe they're just not there on Yahoo Finance
     """
     equity = Ticker(ticker_name)
-    if isinstance(equity.quotes, str):
+    if isinstance(equity.quote_type, str):
         return  # no data found for this ticker
-    if "shortName" not in equity.quotes[ticker_name]:
+    if "shortName" not in equity.quote_type[ticker_name]:
         return
-    name = equity.quotes[ticker_name]["shortName"]
+    name = equity.quote_type[ticker_name]["shortName"]
     exec_ages = None
     if "age" in equity.company_officers.columns:
         ages = [int(i) for i in equity.company_officers["age"].fillna(0)]

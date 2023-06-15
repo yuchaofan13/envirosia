@@ -2,7 +2,7 @@ import re
 import json
 
 
-async def get_refinitiv(session, name, ticker, ric_dict):
+async def get_refinitiv(session, name: str, ticker: str, ric_dict: dict) -> dict | None:
     name = re.sub("\.$", "", name)
     name = name.replace(",", "")
     if name in ric_dict:

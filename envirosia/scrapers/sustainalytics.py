@@ -4,7 +4,7 @@ from decimal import Decimal
 # DynamoDB doesn't allow floats
 
 
-async def get_sustainalytics(session, name, ticker):
+async def get_sustainalytics(session, name: str, ticker: str) -> dict | None:
     async with session.post(
         "https://www.sustainalytics.com/sustapi/companyratings/GetCompanyDropdown",
         json={
