@@ -13,7 +13,7 @@ https://github.com/yuchaofan13/envirosia/assets/70356595/318e7064-a90f-4632-844c
 ## Running Envirosia
 
 Create a .env file in the parent directory that contains the following:
-
+```
 OPENAI_API_KEY = 1234567890
 
 AWS_ACCESS_KEY_ID = ABCDEFGH
