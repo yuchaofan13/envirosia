@@ -1,9 +1,10 @@
 # Envirosia 🌲
 
-Envirosia streamlines ESG fund analysis workflows by integrating the power of GPT-4 with real-time data. This proof of concept was built by Yuchao Fan.
+Envirosia streamlines ESG fund analysis workflows by integrating the power of GPT-4 with real-time data. Built by Yuchao Fan.
 
 ## Demo
 https://github.com/yuchaofan13/envirosia/assets/70356595/34166c6c-c5d4-4611-8d99-2a60519bb335
+
 https://github.com/yuchaofan13/envirosia/assets/70356595/fb137687-4391-453a-8788-c307ef6b9ad9
 ## Motivation
 
