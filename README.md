@@ -7,7 +7,9 @@ Under the hood, Envirosia uses the GPT-4 API, asyncio/aiohttp, BeautifulSoup and
 Built by Yuchao Fan.
 
 ## Demo
-https://github.com/yuchaofan13/envirosia/assets/70356595/82baf45d-db25-47d9-99d2-cceac5ca661f
+https://github.com/yuchaofan13/envirosia/assets/70356595/34166c6c-c5d4-4611-8d99-2a60519bb335
+
+
 
 ## Running Envirosia
 
